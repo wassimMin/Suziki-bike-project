@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzuki Bike </title>
+    <link rel="stylesheet" href="styels.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&family=Merriweather&family=Noto+Sans:ital@1&family=Poppins:wght@300&family=Raleway:wght@800&family=Rubik:ital,wght@0,500;1,400&family=Ubuntu:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <header>
+            <a href=""><img src="logo.png" alt="" class="logo"></a>
+            <ul class="navigation">
+                <li><a href="#">Top Features</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h2>Ready to <span>Race</span></h2>
+            <a href="" class="btn">Ride Now</a>
+            <img src="katana_m2_yua_right_2000x1500.webp" class="bike">
+        </div>
+        <div class="slider">
+            <div class="slides active">
+                <h2><span>Engine</span><br>600 cc</h2>
+                <h2><span>Max Speed</span><br>270 Kmph</h2>
+            </div>
+            <div class="slides">
+                <h2><span>Mileage</span><br>14 Kmpl</h2>
+                <h2><span>0-100 Kmph</span><br>4 Seconds</h2>
+            </div>
+            <div class="slides">
+                <h2><span>Wheels</span><br>17-Inch Alloy</h2>
+                <h2><span>Tyre Type</span><br>Tubeless</h2>
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="sci">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            </ul>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const slides = document.querySelectorAll('.slides');
+        const dots = document.querySelectorAll('.dot');
+        function setActive(i){
+            for(slide of slides){
+                slide.classList.remove('active');
+                slides[i].classList.add('active');
+            }
+            for(dot of dots){
+                dot.classList.remove('active');
+                dots[i].classList.add('active');
+            }
+        }
+        for(let j=0;j<dots.length;j++){
+            dots[j].addEventListener('click',function(){
+                setActive(j)
+            });
+        }
+    
+    </script>
+</body>
+</html> 
